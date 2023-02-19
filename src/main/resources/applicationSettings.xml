@@ -5,6 +5,12 @@
        xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
+    <context:component-scan base-package="dev.jlkesh.lessons"/>
+<!--    <context:property-placeholder location="classpath:aa.properties"/>-->
+
+    <bean class="dev.jlkesh.lessons.Manager" id="manager2">
+        <!--<property name="name" value="${name}"/>
+        <property name="age" value="${age:23}"/>-->
+    </bean>
 
 </beans>
