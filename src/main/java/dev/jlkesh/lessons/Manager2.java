@@ -1,27 +1,19 @@
 package dev.jlkesh.lessons;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-
-public class Manager {
+ 
+public class Manager2 {
 
     @Value("${name3:Elmurodov Javohir}")
     private String name;
     @Value("${age}")
     private int age;
 
-    @PostConstruct
     void init() {
         System.out.println("Manager init method called");
-    }
-
-    @PreDestroy
-    void destroy(){
-        System.out.println("Manager destroy method called");
     }
 
     public void setAge(int age) {
@@ -34,7 +26,7 @@ public class Manager {
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Manager2{" +
                 "name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 '}';
