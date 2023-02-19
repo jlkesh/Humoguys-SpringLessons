@@ -43,9 +43,7 @@
     />
 
     <bean class="dev.jlkesh.lessons.AuthService" id="authService" />
-    <bean class="dev.jlkesh.lessons.AuthController" id="authController"
-        autowire="byType"
-    />
+    <bean class="dev.jlkesh.lessons.AuthController" id="authController" autowire="byType"/>
 
 
 </beans>
