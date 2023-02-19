@@ -4,11 +4,19 @@ package dev.jlkesh.lessons;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AuthController {
-    private final AuthService authService;
+    private AuthService authService;
 
+    public AuthController() {
+    }
 
-    @Autowired
-    public AuthController(AuthService authService) {
+    public void setAuthService(AuthService authService) {
         this.authService = authService;
+    }
+
+    @Override
+    public String toString() {
+        return "AuthController{" +
+                "authService=" + authService +
+                '}';
     }
 }
