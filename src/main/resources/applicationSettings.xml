@@ -2,48 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:c="http://www.springframework.org/schema/c"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--<bean class="dev.jlkesh.lessons.User" id="user"
-          p:email="jl@gmail.com"
-          p:username="john"
-    />-->
-    <bean class="dev.jlkesh.lessons.User" id="user"
-          factory-method="getInstance"
-          init-method="init"
-          destroy-method="destroy"
-          scope="singleton"
-          lazy-init="true"
-    />
-    <!--c:username="Javohir"
-    c:email="El.@gmail.com"
-    p:username="JavohirBotirov"
-    p:email="qwqwqw@dkjfgbvnfd.com"-->
-
-    <!--<constructor-arg index="0" value="john"/>
-    <constructor-arg index="1" value="jl@gmail.com"/>-->
-    <!--<property name="username" value="john"/>
-    <property name="email" value="jl@gmail.com"/>-->
-    <!--<constructor-arg name="username" value="john"/>
-    <constructor-arg name="email" value="jl@gmail.com"/>-->
-    <!--</bean>-->
-
-    <bean class="dev.jlkesh.lessons.DBUserService"
-          id="userService1"
-          init-method="init"
-          destroy-method="destroy"
-          lazy-init="true"
-    />
-    <bean class="dev.jlkesh.lessons.FakeUserService"
-          id="userService2"
-          init-method="init"
-          destroy-method="destroy"
-          lazy-init="true"
-    />
-
-    <bean class="dev.jlkesh.lessons.AuthService" id="authService" />
-    <bean class="dev.jlkesh.lessons.AuthController" id="authController" autowire="byType"/>
-
+    <context:annotation-config/>
 
 </beans>
